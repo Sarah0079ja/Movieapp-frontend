@@ -27,7 +27,7 @@ const MovieDetail = props => {
             setCasts(response.cast);
           });
       });
-  }, []);
+  });
 
   const handleClick = () => {
     setActorToggle(!ActorToggle);

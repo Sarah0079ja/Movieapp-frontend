@@ -36,7 +36,7 @@ import axios from 'axios'
         }
       })
 
-  }, [])
+  })
 
 const  onClickFavorite = () => {
   if(Favorited) {

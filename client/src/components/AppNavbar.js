@@ -58,7 +58,7 @@ class AppNavbar extends Component {
 
     return (
       <div>
-        <Navbar color="success" dark expand="sm" className="mb-5">
+        <Navbar color="success" dark expand="sm" className="">
           <Container>
             <NavbarBrand href="/">MovieApp</NavbarBrand>
             <Nav className='mr-auto' style={{color: 'white'}}> <a href='/favorite' key='favorite'>Favorite</a></Nav>

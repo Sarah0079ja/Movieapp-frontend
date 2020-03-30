@@ -31,7 +31,7 @@ const { Title } = Typography;
               }}
             >
               <Title style={{ color: "white" }} level={2}>
-                Title
+                {props.title}
               </Title>
               <p style={{ color: "white", fontSize: "1rem" }}>{props.text}</p>
             </div>

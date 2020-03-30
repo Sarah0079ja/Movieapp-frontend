@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Typography, Popover } from "antd";
 import axios from "axios";
 import "./Favorite.css";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../Calls";
 
 const { Title } = Typography;
 
 function FavoritePage() {
-  const user = useSelector(state => state.user);
+  // const user = useSelector(state => state.user);
 
   const [Favorites, setFavorites] = useState([]);
   const [Loading, setLoading] = useState(true);
@@ -16,7 +16,7 @@ function FavoritePage() {
 
   useEffect(() => {
     fetchFavoredMovie();
-  }, []);
+  });
 
   const fetchFavoredMovie = () => {
     axios.post("/api/favorite/getFavoredMovie", variable).then(response => {
@@ -49,7 +49,7 @@ function FavoritePage() {
     const content = (
       <div>
         {favorite.moviePost ? (
-          <img src={`${IMAGE_BASE_URL}${POSTER_SIZE}${favorite.moviePost}`} />
+          <img src={`${IMAGE_BASE_URL}${POSTER_SIZE}${favorite.moviePost}`} alt="" />
         ) : (
           "no image"
         )}
