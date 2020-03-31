@@ -13,7 +13,7 @@ const Landing = ()  => {
    const [CurrentPage, setCurrentPage] = useState([0])
 
   useEffect(() => {
-    const endpoint =  `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+    const endpoint = ` http://api.themoviedb.org/3/ movie/popular?api_key=1b5db8d5068d9319c006d7b0385d2f65 &language=en-US&page=1`;
     fetchMovies(endpoint)
   }, [])
 
